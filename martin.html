@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Peter Nandasava | Tech Innovator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #005f99;
+      --primary-dark: #004a77;
+      --secondary: #ff6b35;
+      --accent: #2ecc71;
+      --light: #f4f4f4;
+      --dark: #333;
+      --gray: #777;
+      --white: #ffffff;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a1929 0%, #001a33 100%);
+      color: var(--light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 100px 20px 120px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    }
+    
+    h1 {
+      font-size: 4.2rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to right, #ffffff, #a0d2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 8s ease infinite;
+      background-size: 200% 200%;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .tagline {
+      font-size: 2rem;
+      max-width: 800px;
+      margin: 0 auto 25px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .highlight {
+      background: rgba(255, 255, 255, 0.15);
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 30px;
+      margin: 25px 0;
+      font-size: 1.3rem;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 95, 153, 0.3);
+    }
+    
+    h2 {
+      color: var(--white);
+      font-size: 2.5rem;
+      margin-bottom: 35px;
+      padding-bottom: 15px;
+      position: relative;
+    }
+    
+    h2:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(to right, var(--secondary), var(--accent));
+      border-radius: 2px;
+    }
+    
+    h3 {
+      font-size: 1.8rem;
+      color: var(--white);
+      margin: 30px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    h3 i {
+      color: var(--secondary);
+      background: rgba(255, 107, 53, 0.1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: -100px;
+      margin-bottom: 60px;
+    }
+    
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 40px rgba(0, 95, 153, 0.5);
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+      background: #001a33;
+    }
+    
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .profile-img:hover img {
+      transform: scale(1.1);
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 25px 0;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2rem;
+      transition: var(--transition);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 20px;
+      border-radius: 12px;
+    }
+    
+    .contact-item a {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .contact-item a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    
+    .contact-item i {
+      color: var(--secondary);
+      font-size: 1.5rem;
+      min-width: 30px;
+      text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+    }
+    
+    /* Enhanced Education Timeline */
+    .education-section {
+      border-radius: 20px;
+      padding: 50px;
+      margin: 50px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .education-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(16, 36, 56, 0.8) 0%, rgba(0, 26, 51, 0.8) 100%);
+      z-index: -2;
+    }
+    
+    .education-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 95, 153, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.2) 0%, transparent 40%);
+      animation: pulse 8s ease infinite;
+      z-index: -1;
+    }
+    
+    @keyframes pulse {
+      0% { background-size: 100% 100%; }
+      50% { background-size: 150% 150%; }
+      100% { background-size: 100% 100%; }
+    }
+    
+    .education-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    
+    .education-column {
+      position: relative;
+    }
+    
+    .education-column:first-child:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -25px;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      box-shadow: 0 0 20px rgba(0, 95, 153, 0.5);
+    }
+    
+    .education-item {
+      position: relative;
+      padding: 30px;
+      margin-bottom: 35px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+      border-left: 5px solid var(--secondary);
+      backdrop-filter: blur(5px);
+      background: rgba(0, 30, 60, 0.5);
+    }
+    
+    .education-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 15px 35px rgba(0, 95, 153, 0.4);
+      background: rgba(0, 40, 80, 0.6);
+    }
+    
+    .education-item.primary {
+      border-left-color: var(--accent);
+    }
+    
+    .education-item.secondary {
+      border-left-color: var(--primary);
+    }
+    
+    .education-item.university {
+      border-left-color: #9b59b6;
+    }
+    
+    .education-item.hobbies {
+      border-left-color: #e74c3c;
+    }
+    
+    .education-date {
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+    }
+    
+    .education-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0, 95, 153, 0.5);
+    }
+    
+    .education-item.primary .education-icon {
+      background: var(--accent);
+      box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+    }
+    
+    .education-item.secondary .education-icon {
+      background: var(--primary);
+    }
+    
+    .education-item.university .education-icon {
+      background: #9b59b6;
+      box-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+    }
+    
+    .education-item.hobbies .education-icon {
+      background: #e74c3c;
+      box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    }
+    
+    .hobbies-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    
+    .hobby-tag {
+      background: rgba(46, 204, 113, 0.15);
+      color: var(--accent);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      transition: var(--transition);
+    }
+    
+    .hobby-tag:hover {
+      transform: translateY(-3px);
+      background: rgba(46, 204, 113, 0.25);
+      box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+    }
+    
+    /* Technical Projects with Live Backgrounds */
+    .projects-section {
+      margin: 60px 0;
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border-radius: 20px;
+    }
+    
+    .projects-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(20, 40, 70, 0.8) 0%, rgba(10, 25, 41, 0.8) 100%);
+      z-index: -2;
+    }
+    
+    .projects-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 30% 20%, rgba(0, 95, 153, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 70% 80%, rgba(255, 107, 53, 0.3) 0%, transparent 30%);
+      animation: pulse 10s ease infinite;
+      z-index: -1;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 35px;
+      margin-top: 40px;
+    }
+    
+    .project-card {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      transition: var(--transition);
+      position: relative;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      opacity: 0.7;
+      transition: transform 0.5s ease;
+    }
+    
+    .project-card:hover .project-bg {
+      transform: scale(1.1);
+    }
+    
+    .project-header {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+      color: white;
+      padding: 25px;
+      z-index: 1;
+    }
+    
+    .project-body {
+      padding: 25px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      margin-top: auto;
+      z-index: 1;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+    
+    .tech-tag {
+      background: rgba(0, 95, 153, 0.3);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Connect Section with Live Background */
+    .connect-section {
+      border-radius: 20px;
+      padding: 50px;
+      margin: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .connect-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 25, 41, 0.8) 0%, rgba(0, 26, 51, 0.8) 100%);
+      z-index: -2;
+    }
+    
+    .connect-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 95, 153, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.3) 0%, transparent 40%);
+      animation: pulse 8s ease infinite;
+      z-index: -1;
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .social-card {
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+      color: var(--white);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .social-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 95, 153, 0.4);
+      background: rgba(0, 95, 153, 0.2);
+      border-color: rgba(0, 95, 153, 0.5);
+    }
+    
+    .social-card i {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: var(--transition);
+    }
+    
+    .social-card:hover i {
+      transform: scale(1.2);
+    }
+    
+    .social-card .handle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Platform specific styles */
+    .github-card { background: #333; }
+    .github-card i { color: #fff; }
+    
+    .youtube-card { background: #ff0000; }
+    .youtube-card i { color: #fff; }
+    
+    .tiktok-card { background: #000; }
+    .tiktok-card i { color: #ff0050; }
+    
+    .facebook-card { background: #4267B2; }
+    .facebook-card i { color: #fff; }
+    
+    .threads-card { background: #000; }
+    .threads-card i { color: #fff; }
+    
+    .twitter-card { background: #1DA1F2; }
+    .twitter-card i { color: #fff; }
+    
+    .instagram-card { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .instagram-card i { color: #fff; }
+    
+    .linkedin-card { background: #0077b5; }
+    .linkedin-card i { color: #fff; }
+    
+    .website-card { background: #3498db; }
+    .website-card i { color: #fff; }
+    
+    .email-card { background: #D44638; }
+    .email-card i { color: #fff; }
+    
+    .phone-card { background: #25D366; }
+    .phone-card i { color: #fff; }
+    
+    .likee-card { background: #00B5FF; }
+    .likee-card i { color: #fff; }
+    
+    .location-card { background: #8e44ad; }
+    .location-card i { color: #fff; }
+    
+    /* Bottom Section - Video and Rating */
+    .bottom-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      margin: 60px 0;
+    }
+    
+    /* TikTok Video Section */
+    .video-container {
+      background: linear-gradient(45deg, #000000, #121212);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    
+    .video-header {
+      background: linear-gradient(90deg, #ff0050, #00f2ea);
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .video-header i {
+      font-size: 1.8rem;
+    }
+    
+    .video-controls {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .control-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+    }
+    
+    .control-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+    
+    .video-player {
+      width: 100%;
+      height: 500px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .video-player iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    footer {
+      background: linear-gradient(to right, #001a33, #000d1a);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 0 40px;
+      margin-top: 80px;
+      clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+      position: relative;
+    }
+    
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(0, 95, 153, 0.2) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 30%);
+    }
+    
+    /* Rating Modal */
+    .rating-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #0a1929, #001a33);
+      border-radius: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    
+    .rating-stars-modal {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 30px 0;
+    }
+    
+    .rating-stars-modal i {
+      font-size: 2.5rem;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .rating-stars-modal i.active {
+      color: #ffc107;
+    }
+    
+    .submit-rating-btn {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin: 20px auto;
+      display: block;
+      font-weight: 600;
+    }
+    
+    .submit-rating-btn:hover {
+      background: #ff5a1f;
+      transform: translateY(-3px);
+    }
+    
+    /* Lazy Loading Styles */
+    .lazy-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .lazy-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Professional Expertise Background */
+    .expertise-section {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .expertise-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 40, 70, 0.8) 0%, rgba(0, 30, 60, 0.8) 100%);
+      z-index: -2;
+    }
+    
+    .expertise-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 25% 75%, rgba(0, 95, 153, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 75% 25%, rgba(255, 107, 53, 0.3) 0%, transparent 40%);
+      animation: pulse 12s ease infinite;
+      z-index: -1;
+    }
+    
+    /* Civic Tech Leadership Background */
+    .civic-section {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .civic-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(30, 60, 100, 0.8) 0%, rgba(15, 40, 80, 0.8) 100%);
+      z-index: -2;
+    }
+    
+    .civic-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 40% 60%, rgba(0, 150, 200, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 60% 40%, rgba(100, 200, 255, 0.3) 0%, transparent 40%);
+      animation: pulse 14s ease infinite;
+      z-index: -1;
+    }
+    
+    /* Ad System Styles */
+    .ad-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .ad-box {
+      width: 300px;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: slideIn 0.5s ease-out forwards;
+      transform: translateX(120%);
+      opacity: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @keyframes slideIn {
+      0% { transform: translateX(120%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    
+    .ad-header {
+      background: linear-gradient(90deg, #ff6b35, #ff9a44);
+      padding: 12px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .ad-title {
+      font-weight: 600;
+      color: white;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .ad-close {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .ad-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+    
+    .ad-content {
+      padding: 15px;
+    }
+    
+    .tiktok-ad iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      border: none;
+    }
+    
+    .social-ad {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .social-ad-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-ad-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
+    }
+    
+    .social-ad-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    
+    .social-ad-text {
+      flex: 1;
+    }
+    
+    .social-ad-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 3px;
+    }
+    
+    .social-ad-text p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    .visit-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .visit-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    @media (max-width: 900px) {
+      .bottom-section, .education-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .education-column:first-child:after {
+        display: none;
+      }
+      
+      .profile-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 3rem;
+      }
+      
+      .tagline {
+        font-size: 1.5rem;
+      }
+      
+      .video-player {
+        height: 350px;
+      }
+      
+      .ad-container {
+        top: 10px;
+        right: 10px;
+      }
+      
+      .ad-box {
+        width: 280px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .ad-container {
+        width: 100%;
+        padding: 0 10px;
+        align-items: center;
+      }
+      
+      .ad-box {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background Particles -->
+  <canvas class="particles"></canvas>
+
+  <!-- Ad Container -->
+  <div class="ad-container" id="adContainer">
+    <!-- Ads will be inserted here dynamically -->
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Martin Peter Nandasava</h1>
+      <p class="tagline">Enterprise Full-Stack Developer • Blockchain Architect • Civic-Tech Innovator</p>
+      <div class="highlight">Building digital solutions that scale to millions of users with precision and reliability</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="profile-header">
+      <div class="profile-img">
+        <!-- Embedded profile image -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23005f99'/%3E%3Cstop offset='100%25' stop-color='%23ff6b35'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='220' height='220' fill='url(%23grad)'/%3E%3Ccircle cx='110' cy='90' r='40' fill='%23ffffff'/%3E%3Cpath d='M40,190 Q110,150 180,190 L180,220 L40,220 Z' fill='%23ffffff'/%3E%3C/svg%3E" alt="Martin Peter Nandasava">
+      </div>
+      <div>
+        <h2>Martin Peter Nandasava</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:martinnandasava@gmail.com">martinnandasava@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+254740830343">+254740830343</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="https://www.google.com/maps/place/Karen,+Nairobi/@-1.3138069,36.6792868,21z/data=!4m6!3m5!1s0x182f1c809869d64b:0x199b5604a77f13f5!8m2!3d-1.3239941!4d36.6678026!16zL20vMDk5XzA4?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Karen, Nairobi</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Zetech University</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="expertise-section lazy-section">
+      <div class="card">
+        <h2>Professional Expertise</h2>
+        <p>Martin Peter Nandasava is a visionary Kenyan technologist with specialized expertise in building and maintaining high-traffic, enterprise-grade websites and applications. His technical capabilities extend to creating robust digital solutions that serve millions of users while maintaining peak performance, security, and reliability.</p>
+        
+        <div class="enterprise-capability">
+          <h3>Enterprise Web Development Capacity</h3>
+          <p>Martin Peter Nandasava possesses demonstrated expertise in architecting and maintaining large-scale web platforms capable of handling massive traffic volumes. His solutions incorporate:</p>
+          <ul style="margin: 15px 0 15px 30px;">
+            <li>Cloud-native architectures with auto-scaling capabilities</li>
+            <li>Enterprise-grade security protocols and compliance measures</li>
+            <li>High-availability infrastructure with 99.99% uptime</li>
+            <li>Advanced database optimization and caching strategies</li>
+            <li>Continuous deployment pipelines for rapid iteration</li>
+          </ul>
+          <p>Martin Peter Nandasava's approach to large-scale web development ensures platforms remain performant under heavy load while maintaining flexibility for future expansion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section lazy-section">
+      <h2>Technical Projects & Innovations</h2>
+      <p>Martin Peter Nandasava has developed several groundbreaking solutions that demonstrate his capacity for complex system architecture:</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #1a2a6c, #b21f1f, #1a2a6c); animation: gradientBG 10s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>EduGuardian</h3>
+          </div>
+          <div class="project-body">
+            <p>Classroom analytics platform serving thousands of simultaneous users with real-time data processing. Designed by Martin Peter Nandasava to handle educational institution-scale deployments.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">AI Analytics</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <p><strong>Achievement:</strong> Winner of 2023 Nairobi DigiHackathon</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #00c9ff, #92fe9d, #00c9ff); animation: gradientBG 12s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>FlashXchange</h3>
+          </div>
+          <div class="project-body">
+            <p>High-performance crypto trading simulator handling real-time market data feeds for thousands of concurrent traders. Engineered by Martin Peter Nandasava to demonstrate financial system scalability.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Blockchain</span>
+              <span class="tech-tag">Real-time Data</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <p><strong>Scale:</strong> Processes 5,000+ transactions/second</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #654ea3, #da98b4, #654ea3); animation: gradientBG 15s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>SmartContract Scanner</h3>
+          </div>
+          <div class="project-body">
+            <p>Forensic security tool analyzing blockchain transactions across multiple networks. Developed by Martin Peter Nandasava to handle enterprise-grade blockchain forensic requirements.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Cryptography</span>
+              <span class="tech-tag">Blockchain</span>
+              <span class="tech-tag">Security</span>
+            </div>
+            <p><strong>Recognition:</strong> Featured in 2022 East African Blockchain Challenge</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #141e30, #243b55, #141e30); animation: gradientBG 14s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>Kenya CivicHub</h3>
+          </div>
+          <div class="project-body">
+            <p>Digital platform connecting citizens with government services, enabling feedback on policies and tracking of public projects. Used in 5 counties with 50,000+ active users.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <p><strong>Impact:</strong> Increased civic participation by 40% in pilot regions</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff416c); animation: gradientBG 11s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>AgriChain Kenya</h3>
+          </div>
+          <div class="project-body">
+            <p>Blockchain-based supply chain solution for smallholder farmers, connecting them directly with buyers and reducing middlemen. Currently serving 2,000+ farmers across Western Kenya.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Ethereum</span>
+              <span class="tech-tag">Solidity</span>
+              <span class="tech-tag">Flutter</span>
+            </div>
+            <p><strong>Result:</strong> Increased farmer income by 35% on average</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #2193b0, #6dd5ed, #2193b0); animation: gradientBG 13s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>MediSecure Africa</h3>
+          </div>
+          <div class="project-body">
+            <p>Healthcare data management system with end-to-end encryption, allowing secure sharing of medical records across facilities while maintaining patient privacy.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">HIPAA Compliance</span>
+              <span class="tech-tag">AES-256</span>
+              <span class="tech-tag">Django</span>
+            </div>
+            <p><strong>Deployment:</strong> Currently in 12 clinics across Nairobi</p>
+          </div>
+        </div>
+        
+        <!-- Additional Projects -->
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #ff9966, #ff5e62, #ff9966); animation: gradientBG 9s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>Nairobi Traffic AI</h3>
+          </div>
+          <div class="project-body">
+            <p>Machine learning platform that predicts and optimizes Nairobi's traffic flow in real-time, reducing average commute times by 25%.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">IoT Sensors</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <p><strong>Impact:</strong> Deployed at 50 major intersections</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #7b4397, #dc2430, #7b4397); animation: gradientBG 16s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>FinTrust API</h3>
+          </div>
+          <div class="project-body">
+            <p>Banking-grade API platform that enables secure financial transactions for mobile banking applications across East Africa.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">OAuth 2.0</span>
+              <span class="tech-tag">Java</span>
+            </div>
+            <p><strong>Scale:</strong> Processes 10M+ transactions monthly</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-bg" style="background: linear-gradient(45deg, #00d2ff, #3a7bd5, #00d2ff); animation: gradientBG 12s ease infinite; background-size: 200% 200%;"></div>
+          <div class="project-header">
+            <h3>AgroWeather</h3>
+          </div>
+          <div class="project-body">
+            <p>IoT-based agricultural monitoring system that provides real-time weather data and crop health analysis to farmers via mobile app.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <p><strong>Deployment:</strong> 500+ farms across Kenya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section lazy-section">
+      <h2>Education Background & Hobbies</h2>
+      <div class="education-container">
+        <!-- Left Column - Primary Schools & Hobbies -->
+        <div class="education-column">
+          <div class="education-item primary">
+            <div class="education-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-calendar"></i>
+              2006 - 2011
+            </div>
+            <h3>Various Primary Schools</h3>
+            <p>Lukhokhwe Primary (Classes 2-4 & 5), Bahati Primary (Class 4, Term 2), Ortum Boys Primary (Class 5)</p>
+            <p>Martin Peter Nandasava attended multiple schools across Western Kenya, developing adaptability and cultural awareness.</p>
+          </div>
+          
+          <div class="education-item primary">
+            <div class="education-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-calendar"></i>
+              2012 - 2015
+            </div>
+            <h3>Tamkal Primary School</h3>
+            <p>Classes 6-8, Muino, West Pokot</p>
+            <p>Martin Peter Nandasava completed his primary education with top marks in science and mathematics.</p>
+          </div>
+          
+          <!-- Hobbies Section -->
+          <div class="education-item hobbies">
+            <div class="education-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-star"></i>
+              Hobbies & Interests
+            </div>
+            <h3>Martin's Personal Interests</h3>
+            <p>Beyond his professional work, Martin Peter Nandasava enjoys various activities that balance his technical pursuits.</p>
+            <div class="hobbies-container">
+              <span class="hobby-tag"><i class="fas fa-swimmer"></i> Swimming</span>
+              <span class="hobby-tag"><i class="fas fa-gamepad"></i> Gaming</span>
+              <span class="hobby-tag"><i class="fab fa-python"></i> Python</span>
+              <span class="hobby-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+              <span class="hobby-tag"><i class="fab fa-php"></i> PHP</span>
+              <span class="hobby-tag"><i class="fab fa-java"></i> Java</span>
+              <span class="hobby-tag"><i class="fas fa-code"></i> C++</span>
+              <span class="hobby-tag"><i class="fas fa-laptop-code"></i> C#</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column - Secondary & University -->
+        <div class="education-column">
+          <div class="education-item secondary">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-calendar"></i>
+              2018
+            </div>
+            <h3>Kesogon Secondary School</h3>
+            <p>Form 1, Trans-Nzoia</p>
+            <p>Martin Peter Nandasava began his secondary education journey in Trans-Nzoia.</p>
+          </div>
+          
+          <div class="education-item secondary">
+            <div class="education-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-calendar"></i>
+              2019 - 2021
+            </div>
+            <h3>St. Augustine Mlimani Secondary School</h3>
+            <p>Forms 2-4, Nairobi</p>
+            <p>Martin Peter Nandasava developed foundational programming skills, participated in science fairs, and served as IT club president.</p>
+          </div>
+          
+          <div class="education-item university">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-date">
+              <i class="fas fa-calendar"></i>
+              2022 - Present
+            </div>
+            <h3>Zetech University</h3>
+            <p>BSc in Information Technology (Blockchain & Digital Innovation)</p>
+            <p>Martin Peter Nandasava is currently pursuing his degree with a focus on smart contract development, cryptographic systems, and decentralized applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect-section lazy-section">
+      <h2>Connect with Martin</h2>
+      <p>Reach out to Martin Peter Nandasava through various platforms for collaboration, inquiries, or to follow his work:</p>
+      
+      <div class="social-grid">
+        <a href="https://github.com/nandasava" class="social-card github-card" target="_blank">
+          <i class="fab fa-github"></i>
+          <div>GitHub</div>
+          <div class="handle">@nandasava</div>
+        </a>
+        
+        <a href="https://youtube.com/@Martinpeternandasava" class="social-card youtube-card" target="_blank">
+          <i class="fab fa-youtube"></i>
+          <div>YouTube</div>
+          <div class="handle">@Martinpeternandasava</div>
+        </a>
+        
+        <a href="https://tiktok.com/@martinnandasava" class="social-card tiktok-card" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          <div>TikTok</div>
+          <div class="handle">@martinnandasava</div>
+        </a>
+        
+        <a href="https://www.facebook.com/martin.peter.31542" class="social-card facebook-card" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <div>Facebook</div>
+          <div class="handle">Martin Peter</div>
+        </a>
+        
+        <a href="https://threads.net/@martinnandasava" class="social-card threads-card" target="_blank">
+          <i class="fab fa-threads"></i>
+          <div>Threads</div>
+          <div class="handle">@martinnandasava</div>
+        </a>
+        
+        <a href="https://twitter.com/martinnandasava" class="social-card twitter-card" target="_blank">
+          <i class="fab fa-x-twitter"></i>
+          <div>Twitter/X</div>
+          <div class="handle">@martinnandasava</div>
+        </a>
+        
+        <a href="https://instagram.com/martinnandasava" class="social-card instagram-card" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <div>Instagram</div>
+          <div class="handle">@martinnandasava</div>
+        </a>
+        
+        <a href="https://linkedin.com/in/martin-nandadava" class="social-card linkedin-card" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+          <div>LinkedIn</div>
+          <div class="handle">Martin Nandasava</div>
+        </a>
+        
+        <a href="https://martinpeternandasava.com" class="social-card website-card" target="_blank">
+          <i class="fas fa-globe"></i>
+          <div>Personal Website</div>
+          <div class="handle">Portfolio</div>
+        </a>
+        
+        <a href="mailto:martinnandasava@gmail.com" class="social-card email-card">
+          <i class="fas fa-envelope"></i>
+          <div>Email</div>
+          <div class="handle">martinnandasava</div>
+        </a>
+        
+        <a href="tel:+254740830343" class="social-card phone-card">
+          <i class="fas fa-phone"></i>
+          <div>Phone</div>
+          <div class="handle">+254740830343</div>
+        </a>
+        
+        <a href="https://likee.com/@nandasava500" class="social-card likee-card" target="_blank">
+          <i class="fab fa-likee"></i>
+          <div>Likee</div>
+          <div class="handle">@nandasava500</div>
+        </a>
+        
+        <a href="https://www.google.com/maps/place/Karen,+Nairobi/@-1.3138069,36.6792868,21z/data=!4m6!3m5!1s0x182f1c809869d64b:0x199b5604a77f13f5!8m2!3d-1.3239941!4d36.6678026!16zL20vMDk5XzA4?entry=ttu&g_ep=EgoyMDI5MDYyNi4wIKXMDSoASAFQAw%3D%3D" class="social-card location-card" target="_blank">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>Location</div>
+          <div class="handle">Karen, Nairobi</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="civic-section lazy-section">
+      <div class="card">
+        <h2>Civic Tech Leadership</h2>
+        <p>Martin Peter Nandasava is an emerging thought leader in Kenya's civic technology space with a multifaceted vision for technology's role in society:</p>
+        
+        <h3><i class="fas fa-balance-scale"></i> Digital Policy Advocacy</h3>
+        <p>Martin Peter Nandasava actively participates in shaping Kenya's digital legislation framework, focusing on data privacy regulations, cryptocurrency governance, and equitable technology access policies.</p>
+        
+        <h3><i class="fas fa-chalkboard-teacher"></i> Educational Initiatives</h3>
+        <p>Martin Peter Nandasava develops digital literacy programs that teach blockchain fundamentals to youth through partnerships with schools and community organizations across Kenya's underserved regions.</p>
+        
+        <h3><i class="fas fa-code-branch"></i> Open Source Contributions</h3>
+        <p>Martin Peter Nandasava maintains several civic technology repositories that enable transparent governance processes and citizen engagement platforms used by municipal governments.</p>
+      </div>
+    </section>
+
+    <!-- Bottom Section with Video and Rating -->
+    <div class="bottom-section">
+      <div class="video-container">
+        <div class="video-header">
+          <div>
+            <i class="fab fa-tiktok"></i>
+            <h3>Featured TikTok Video</h3>
+          </div>
+          <div class="video-controls">
+            <button class="control-btn" id="muteBtn" title="Mute/Unmute">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <button class="control-btn" id="replayBtn" title="Replay Video">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+        </div>
+        <div class="video-player">
+          <iframe 
+            id="tiktokVideo"
+            src="https://www.tiktok.com/embed/v2/7427061064254115078?mute=0" 
+            allowfullscreen 
+            scrolling="no" 
+            allow="autoplay; encrypted-media;"
+          ></iframe>
+        </div>
+      </div>
+      
+      <div class="card lazy-section">
+        <h2>Rate My Profile</h2>
+        <p>Your feedback helps me improve my presentation and content</p>
+        
+        <div class="rating-stats" style="display: flex; justify-content: space-around; margin: 30px 0;">
+          <div style="text-align: center;">
+            <div id="averageRating" style="font-size: 3rem; color: var(--secondary); font-weight: 700;">4.8</div>
+            <div>Average Rating</div>
+          </div>
+          <div style="text-align: center;">
+            <div id="totalRatings" style="font-size: 3rem; color: var(--accent); font-weight: 700;">42</div>
+            <div>Total Ratings</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; gap: 10px; margin: 30px 0;">
+          <i class="fas fa-star" style="font-size: 2.5rem; color: #ffc107;"></i>
+          <i class="fas fa-star" style="font-size: 2.5rem; color: #ffc107;"></i>
+          <i class="fas fa-star" style="font-size: 2.5rem; color: #ffc107;"></i>
+          <i class="fas fa-star" style="font-size: 2.5rem; color: #ffc107;"></i>
+          <i class="fas fa-star" style="font-size: 2.5rem; color: #ffc107;"></i>
+        </div>
+        
+        <button id="openRatingModal" style="background: var(--secondary); color: white; border: none; padding: 15px 35px; border-radius: 30px; font-size: 1.2rem; cursor: pointer; transition: var(--transition); margin: 20px auto; display: block; font-weight: 600;">
+          Submit Your Rating
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rating Modal -->
+  <div id="ratingModal" class="rating-modal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h2>Rate My Portfolio</h2>
+      <p>Please select your rating below:</p>
+      
+      <div class="rating-stars-modal">
+        <i class="far fa-star" data-rating="1"></i>
+        <i class="far fa-star" data-rating="2"></i>
+        <i class="far fa-star" data-rating="3"></i>
+        <i class="far fa-star" data-rating="4"></i>
+        <i class="far fa-star" data-rating="5"></i>
+      </div>
+      
+      <p>Selected: <span id="selectedRating">0</span> stars</p>
+      
+      <button id="submitRatingBtn" class="submit-rating-btn" disabled>
+        Submit Rating
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p style="font-size: 1.5rem; margin-bottom: 20px;">"Martin Peter Nandasava creates technology that bridges innovation and social impact at scale."</p>
+      <p>&copy; 2025 Martin Peter Nandasava. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Particles background
+    const canvas = document.querySelector('.particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const particles = [];
+    const particleCount = 100;
+    
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speedX: (Math.random() - 0.5) * 0.5,
+        speedY: (Math.random() - 0.5) * 0.5,
+        color: `rgba(${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 200)}, 255, ${Math.random() * 0.5 + 0.1})`
+      });
+    }
+    
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        
+        p.x += p.speedX;
+        p.y += p.speedY;
+        
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+        
+        // Draw connections between particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dist = Math.sqrt((p.x - p2.x) ** 2 + (p.y - p2.y) ** 2);
+          
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(100, 200, 255, ${0.2 - dist/750})`;
+            ctx.lineWidth = 0.5;
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      requestAnimationFrame(drawParticles);
+    }
+    
+    drawParticles();
+    
+    // TikTok Video Controls
+    const muteBtn = document.getElementById('muteBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const videoIframe = document.getElementById('tiktokVideo');
+    let isMuted = false;
+    
+    muteBtn.addEventListener('click', () => {
+      isMuted = !isMuted;
+      
+      // Update button icon
+      muteBtn.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+      
+      // Reload iframe with new mute parameter
+      const currentSrc = videoIframe.src;
+      const newSrc = currentSrc.includes('mute=') 
+        ? currentSrc.replace(/mute=\d/, `mute=${isMuted ? 1 : 0}`)
+        : currentSrc + (currentSrc.includes('?') ? '&' : '?') + `mute=${isMuted ? 1 : 0}`;
+      
+      videoIframe.src = newSrc;
+    });
+    
+    replayBtn.addEventListener('click', () => {
+      // Reload the iframe to replay the video
+      const currentSrc = videoIframe.src;
+      videoIframe.src = currentSrc;
+    });
+    
+    // Add gradient animation to project backgrounds
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Responsive canvas
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+    // Rating System
+    const ratingModal = document.getElementById('ratingModal');
+    const openRatingModalBtn = document.getElementById('openRatingModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const submitRatingBtn = document.getElementById('submitRatingBtn');
+    const ratingStars = document.querySelectorAll('.rating-stars-modal i');
+    const selectedRatingSpan = document.getElementById('selectedRating');
+    const averageRatingElement = document.getElementById('averageRating');
+    const totalRatingsElement = document.getElementById('totalRatings');
+    
+    let selectedRating = 0;
+    let ratings = [];
+    
+    // Load ratings from localStorage
+    function loadRatings() {
+      const savedRatings = localStorage.getItem('profileRatings');
+      if (savedRatings) {
+        ratings = JSON.parse(savedRatings);
+        updateRatingDisplay();
+      }
+    }
+    
+    // Save ratings to localStorage
+    function saveRatings() {
+      localStorage.setItem('profileRatings', JSON.stringify(ratings));
+    }
+    
+    // Calculate average rating
+    function calculateAverageRating() {
+      if (ratings.length === 0) return 0;
+      const sum = ratings.reduce((total, rating) => total + rating, 0);
+      return (sum / ratings.length).toFixed(1);
+    }
+    
+    // Update rating display
+    function updateRatingDisplay() {
+      const average = calculateAverageRating();
+      averageRatingElement.textContent = average;
+      totalRatingsElement.textContent = ratings.length;
+    }
+    
+    // Initialize ratings
+    loadRatings();
+    
+    // Open rating modal
+    openRatingModalBtn.addEventListener('click', () => {
+      ratingModal.style.display = 'flex';
+    });
+    
+    // Close rating modal
+    closeModalBtn.addEventListener('click', () => {
+      ratingModal.style.display = 'none';
+      resetRatingStars();
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === ratingModal) {
+        ratingModal.style.display = 'none';
+        resetRatingStars();
+      }
+    });
+    
+    // Handle star rating selection
+    ratingStars.forEach(star => {
+      star.addEventListener('click', () => {
+        const rating = parseInt(star.getAttribute('data-rating'));
+        selectedRating = rating;
+        selectedRatingSpan.textContent = rating;
+        
+        // Update star display
+        ratingStars.forEach((s, index) => {
+          if (index < rating) {
+            s.classList.remove('far');
+            s.classList.add('fas', 'active');
+          } else {
+            s.classList.remove('fas', 'active');
+            s.classList.add('far');
+          }
+        });
+        
+        // Enable submit button
+        submitRatingBtn.disabled = false;
+      });
+    });
+    
+    // Reset rating stars
+    function resetRatingStars() {
+      ratingStars.forEach(star => {
+        star.classList.remove('fas', 'active');
+        star.classList.add('far');
+      });
+      selectedRating = 0;
+      selectedRatingSpan.textContent = '0';
+      submitRatingBtn.disabled = true;
+    }
+    
+    // Submit rating
+    submitRatingBtn.addEventListener('click', () => {
+      if (selectedRating > 0) {
+        ratings.push(selectedRating);
+        saveRatings();
+        updateRatingDisplay();
+        
+        // Show success message
+        alert(`Thank you for your ${selectedRating}-star rating!`);
+        
+        // Close modal and reset
+        ratingModal.style.display = 'none';
+        resetRatingStars();
+      }
+    });
+    
+    // Lazy Loading with Intersection Observer
+    const lazySections = document.querySelectorAll('.lazy-section');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+    
+    lazySections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Ad System
+    const adContainer = document.getElementById('adContainer');
+    const tiktokVideos = [
+      'https://www.tiktok.com/@martinnandasava/video/7427414676004211974',
+      'https://www.tiktok.com/@martinnandasava/video/7474525914391448838',
+      'https://www.tiktok.com/@martinnandasava/video/7457393587416780037',
+      'https://www.tiktok.com/@martinnandasava/video/7427075846277434630'
+    ];
+    
+    const socialMediaAds = [
+      { 
+        platform: 'TikTok', 
+        handle: '@martinnandasava', 
+        url: 'https://tiktok.com/@martinnandasava', 
+        icon: 'fab fa-tiktok',
+        color: '#ff0050'
+      },
+      { 
+        platform: 'YouTube', 
+        handle: '@Martinpeternandasava', 
+        url: 'https://youtube.com/@Martinpeternandasava', 
+        icon: 'fab fa-youtube',
+        color: '#ff0000'
+      },
+      { 
+        platform: 'Instagram', 
+        handle: '@martinnandasava', 
+        url: 'https://instagram.com/martinnandasava', 
+        icon: 'fab fa-instagram',
+        color: '#e1306c'
+      },
+      { 
+        platform: 'Twitter', 
+        handle: '@martinnandasava', 
+        url: 'https://twitter.com/martinnandasava', 
+        icon: 'fab fa-x-twitter',
+        color: '#1da1f2'
+      }
+    ];
+    
+    // Create TikTok video ads
+    tiktokVideos.forEach((videoUrl, index) => {
+      setTimeout(() => {
+        const adBox = document.createElement('div');
+        adBox.className = 'ad-box';
+        adBox.innerHTML = `
+          <div class="ad-header">
+            <div class="ad-title">
+              <i class="fab fa-tiktok"></i>
+              TikTok Video
+            </div>
+            <button class="ad-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="ad-content tiktok-ad">
+            <iframe src="${videoUrl}/embed" allowfullscreen></iframe>
+          </div>
+        `;
+        adContainer.appendChild(adBox);
+        
+        // Add close functionality
+        const closeBtn = adBox.querySelector('.ad-close');
+        closeBtn.addEventListener('click', () => {
+          adBox.remove();
+        });
+      }, (index + 1) * 10000); // Show every 10 seconds
+    });
+    
+    // Create social media ads
+    socialMediaAds.forEach((social, index) => {
+      setTimeout(() => {
+        const adBox = document.createElement('div');
+        adBox.className = 'ad-box';
+        adBox.innerHTML = `
+          <div class="ad-header">
+            <div class="ad-title">
+              <i class="fab fa-${social.icon.split(' ')[1]}"></i>
+              Follow Martin
+            </div>
+            <button class="ad-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="ad-content">
+            <div class="social-ad">
+              <a href="${social.url}" class="social-ad-item" target="_blank">
+                <div class="social-ad-icon" style="background: ${social.color}">
+                  <i class="${social.icon}"></i>
+                </div>
+                <div class="social-ad-text">
+                  <h4>${social.platform}</h4>
+                  <p>${social.handle}</p>
+                </div>
+                <button class="visit-btn">Visit</button>
+              </a>
+            </div>
+          </div>
+        `;
+        adContainer.appendChild(adBox);
+        
+        // Add close functionality
+        const closeBtn = adBox.querySelector('.ad-close');
+        closeBtn.addEventListener('click', () => {
+          adBox.remove();
+        });
+      }, (tiktokVideos.length * 10000) + (index * 10000)); // Show after video ads
+    });
+  </script>
+</body>
+</html>
